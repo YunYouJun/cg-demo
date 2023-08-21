@@ -1,13 +1,10 @@
 import * as THREE from 'three'
 
-// postprocessing not work
-// import { EffectComposer, RenderPass } from 'postprocessing'
-
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js'
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js'
-import { OutputPass } from 'three/addons/postprocessing/OutputPass.js'
-import WebGL from 'three/addons/capabilities/WebGL.js'
-import { GUI } from 'three/addons/libs/lil-gui.module.min.js'
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
+import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass'
+import WebGL from 'three/examples/jsm/capabilities/WebGL'
+import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min'
 
 /**
  * @see https://threejs.org/examples/#webgl2_multisampled_renderbuffers

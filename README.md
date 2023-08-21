@@ -8,4 +8,4 @@ Demo for Computer Graphics.
 
 - postprocessing
   - [How to use post-processing?](https://threejs.org/docs/?q=post#manual/en/introduction/How-to-use-post-processing)
-  - [pmndrs/postprocessing](https://github.com/pmndrs/postprocessing)
+  - [pmndrs/postprocessing](https://github.com/pmndrs/postprocessing) is old, not work

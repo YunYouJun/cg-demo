@@ -5,8 +5,22 @@ const online = useOnline()
 <template>
   <div>
     <Logos mb-6 />
+    <ul>
+      <li>
+        <NuxtLink to="/postprocessing/bloom">
+          Bloom
+        </NuxtLink>
+      </li>
+    </ul>
+
     <Suspense>
       <ClientOnly>
+        <ul>
+          <NuxtLink to="/pixi/scale">
+            Scale
+          </NuxtLink>
+        </ul>
+
         <PageView v-if="online" />
         <div v-else text-gray:80>
           You're offline
