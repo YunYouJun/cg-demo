@@ -70,7 +70,6 @@ export async function createScale(container: PIXI.Container, app: PIXI.Applicati
    * OA = scaleSpritePos
    * OA' = pos
    * @param e
-   * @returns
    */
   function onScaleMove(e: PIXI.FederatedPointerEvent) {
     if (!lastPos)
@@ -80,7 +79,7 @@ export async function createScale(container: PIXI.Container, app: PIXI.Applicati
     const ratio = pos.dot(scaleSpritePos) / scaleSpritePos.magnitude()
     const scale = ratio / scaleSpritePos.magnitude()
 
-    if (scale < 0)
+    if (scale < 0.1)
       return
 
     container.scale.x *= scale
