@@ -1,31 +1,32 @@
 <script setup lang="ts">
-const online = useOnline()
+const demoLinks = [
+  {
+    title: 'Bloom',
+    path: '/postprocessing/bloom',
+  },
+  {
+    title: 'Scale',
+    path: '/pixi/scale',
+  },
+  {
+    title: 'Points',
+    path: '/pixi/points',
+  },
+]
 </script>
 
 <template>
   <div>
     <Logos mb-6 />
     <ul>
-      <li>
-        <NuxtLink to="/postprocessing/bloom">
-          Bloom
+      <li v-for="link in demoLinks" :key="link.title">
+        <NuxtLink :to="link.path">
+          {{ link.title }}
         </NuxtLink>
       </li>
     </ul>
 
     <Suspense>
-      <ClientOnly>
-        <ul>
-          <NuxtLink to="/pixi/scale">
-            Scale
-          </NuxtLink>
-        </ul>
-
-        <PageView v-if="online" />
-        <div v-else text-gray:80>
-          You're offline
-        </div>
-      </ClientOnly>
       <template #fallback>
         <div italic op50>
           <span animate-pulse>Loading...</span>
